@@ -1,0 +1,595 @@
+@charset "utf-8";
+
+.conBg{
+     background: url(../images/main/mainBanner.png)no-repeat center center; background-size:cover;
+     padding:100px 0;
+}
+
+
+/*mainSlider*/
+
+.mainSlider{
+    /*padding:300px 0 250px 0;*/
+   /*width 고정xx*/
+    height: 1076px;
+    overflow: hidden;
+    position: relative;
+}
+
+/*.mainSlider::after{
+    content:"";
+    display:block;
+    background-color:rgba(0,0,0,0.5);
+    width:100%;
+    height: 100%;
+    position:absolute;
+}*/ 
+/*동영상이 너무 밝아서 글자가 안보이면 after 이용해서 어둡게 가능.
+  .mainTxt에 z-index도 주면 끗.*/
+
+#mainVideo{
+    position: absolute;
+    left:50%;
+    margin-left:-960px;
+}
+
+.mainTxt{
+    width:100%;
+    position: absolute;
+    top:50%;
+    margin-top:-190px;
+    color:#fff;
+    text-align: center;
+    font-family: 'Godo',sans-serif;
+    /*z-index: 1;*/
+}
+.mainTxt h3{
+    font-size: 30px;
+}
+.mainTxt h2{
+    font-size: 50px;
+    margin:20px 0;
+}
+.mainTxt h2 span{color:#fd0000;}
+
+.mainIcon{
+    display: inline-block;
+    margin-top:30px;
+} 
+/*부모 cf 안시켜도 됨 inline-block으로 바꿔서 중앙정렬ok*/
+
+.mainIcon li{
+    float:left;
+    margin:0 25px;    
+}
+
+.mainIcon li p{
+    margin-top:20px;
+}
+
+.icon{
+    width:160px;
+    height: 160px;
+    background:rgba(255,255,255,0.7);
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.mainIcon li:hover .icon{
+    background: rgba(255,255,255,1);
+}
+
+.icon img{padding-top:42px;}
+
+
+/*mainCon01*/
+
+.mainCon01{
+    background-image:url(../images/main/mainCon01Bg.png);   
+}
+
+.con01L{
+    width:517px;
+    height: 600px;
+    background: url(../images/main/con01Img01.png)no-repeat center center;
+    border-radius:30px 0;
+    float:left;
+    background-size:100%;
+    transition:background-size 0.5s;
+}
+
+.con01L:hover{
+    background-size:150%;
+} /*본체에 background-size가 없으면 transition 적용안되서 본체 100%써주고, hover에 키울비율 써줌,귀찮...*/
+
+.con01L a{
+    display: block;
+    height: 100%;
+}
+
+.con01L h2{
+    font-weight: 500;
+    font-size:30px;
+    padding:30px 0 0 20px;
+}
+
+.con01L h2 span{
+    display:block;
+    font-size:20px;
+}
+
+.con01R{
+    float:right;
+    width:610px;
+}
+
+.conTit{
+    position:absolute;
+    width:280px;
+    word-break: keep-all; /*단어별로 줄바꿈*/
+    margin-left:20px;
+}
+
+.conTit h2{
+    font-family: 'Montserrat';
+    font-size:36px;
+    font-weight:700;
+    /*폰트 bold,font-weight:700 으로 업뎃하기*/
+    margin-bottom: 20px;
+}
+
+.conTit p{}
+
+.sliderBtn{
+    margin-top:80px;
+}   
+
+.sliderBtn li{
+    width:25px;
+    height: 25px;
+    background:#bbb url(../images/main/arrowL.png)no-repeat center center;
+    text-indent: -9999px;
+    border-radius: 50%;
+    float:left;
+    margin-right:10px;
+}
+
+.sliderBtn .nextBtn{
+    background-image:url(../images/main/arrowR.png);
+}
+
+.sliderBtn li a{
+    display: block;
+}
+
+.pdtList{}
+.pdtList li{
+    float:left;
+    margin-left:20px;
+    border-radius:30px 0;
+    overflow:hidden;
+    position:relative;
+    
+}
+
+.pdtList li:first-child{
+    margin-left:325px;
+    margin-bottom: 30px;
+}
+
+.pdtList li a{}
+.pdtList li img{
+    display:block;
+    transition: transform 0.5s;
+}
+
+.pdtList li:hover img{
+    transform: scale(1.5);    
+}
+
+.pdtList li p{
+    position: absolute;
+    bottom:0;
+    background: #fff;
+    width:100%;
+    text-align: center;
+    font-size:20px;
+    font-weight:500;
+    height: 50px;
+    line-height: 50px; /*인라인 없으면 line-height만도 가능*/
+}
+
+
+/*mainCon02*/
+.mainCon02{
+    background-image:url(../images/main/mainCon02Bg.png);
+}
+
+.mainCon02 .conTit,.mainCon04 .conTit,.mainCon05 .conTit{
+    position: static;
+    margin-left:0;
+    color:#fff;
+    text-align: center;
+    width:auto; /*100%도 가능한데 추후 여백줄때 빡칠 가능성 높음*/
+    margin-bottom: 50px;
+}
+
+.mainCon02 .conTit h2{}
+.mainCon02 .conTit p{}
+
+.con02List{
+    position: relative;
+}
+.con02List li{
+    width:380px;
+    height: 500px;
+    background: #fff;
+    float:left;
+    margin-right:30px;
+    position: relative;
+    border-radius: 0 50px 0 0;
+    overflow: hidden;
+}
+.con02List li:last-child{margin-right:0;}
+
+.con02Img{overflow:hidden;}
+/*hover,transition을 위해 img 상위부모(div) 임의로 만들어줌*/
+
+.con02List li img{
+    display: block;
+    transition:transform 1s;
+}
+
+.con02List li:hover img{
+    transform:scale(1.3);
+}
+
+.con02Info{
+    padding:20px;
+    word-break: keep-all;    
+} 
+.con02Info h3{
+    font-size:22px;
+    margin-bottom: 15px;
+}
+.con02Info p{
+    color:#666;
+}
+
+.moreBtn{
+    width:140px;
+    height:45px;
+    line-height: 45px;
+    border:1px solid #ee2e24;
+    border-radius:30px;
+    background:url(../images/main/plusBtn.png)no-repeat 90% center;
+    font-family:'godo';
+    text-indent: 15px; /*들여쓰기*/
+    font-size:14px;
+    position: absolute;
+    bottom:20px;
+}
+
+.moreBtn a{
+    color:#ee2e24;
+    display: block;
+    border-radius:30px;
+    transition:background-color 0.5s linear;
+}
+
+.moreBtn:hover a{
+    background-color:#ee2e24;
+    color:#fff;
+}
+
+
+
+.con02Arrow{
+    width:44px;
+    height:83px;
+    background:url(../images/main/arrowLB.png)no-repeat;
+    text-indent: -9999px;
+    position: absolute;
+    top:50%;
+    margin-top:-42px;
+}
+
+.con02Arrow a{
+    display: block;
+    height: 100%;
+}
+
+.con02LArrow{
+    left:-80px;
+}
+
+.con02RArrow{
+    background-image:url(../images/main/arrowRB.png);
+    right:-80px;
+}
+
+
+/*mainCon03*/
+.mainCon03{
+    background-image: url(../images/main/mainCon03Bg.png);
+}
+
+.mainCon03 img{display: block;}
+
+.mainCon03 .conTit{
+    margin-left:0;
+}
+
+.mainCon03 .conTit span{font-family: 'NotoSans';}
+.mainCon03 .conTit p{}
+
+.youtube{margin-bottom: 20px;} 
+.youtube iframe{
+    display: block;
+    margin:0 0 0 auto;
+}
+/*블록되있으면 margin:0 0 0 auto주면 오른쪽 정렬가능
+  인라인이면 text-align:right하면 끗.        
+*/
+
+.snsList{
+    margin-top:50px;
+}
+.snsList li{
+    float:left;
+    width:50px;
+    height: 50px;
+    border:1px solid #ccc;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    margin-right:15px;
+    transition: background-color 0.3s linear;
+}
+
+.snsList li:hover{
+    background-color:rgba(200,200,200,0.5);
+}
+
+.snsList li a{
+    /*display: inline-block;
+    vertical-align: middle;
+    margin-top:-4px;*/
+    display: block;
+}
+
+.snsList li img{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top:-4px;
+}/*세로중앙정렬: 부모 - line-height, 이미지 - vertical-align
+a - block줘야 됨*/
+
+.con03List{}
+.con03List li{
+    float:left;
+    margin-right:20px;
+}
+
+.con03List li:last-child{margin-right:0;}
+
+.con03List li a{}
+.con03List li img{}
+
+/*mainCon04*/
+
+.mainCon04{
+    background-image: url(../images/main/mainCon04Bg.png);
+}
+
+.mainCon04 .conTit{color:#333;}
+
+.con04List{
+    border-radius: 50px 0;
+    overflow: hidden; /*1타 2피*/
+}
+
+.con04List li{
+    float:left;
+    width:380px;
+    margin-right:30px;
+    position: relative;
+}
+
+.con04List li:last-child{margin-right:0;}
+
+.con04List li::after{
+    content: "";
+    display: block;
+    width:100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    background: none;
+    transition:background 0.3s linear;
+}
+
+.con04List li:hover::after{
+    background:rgba(0,0,0,0.2);
+    
+}
+
+.con04List li a{}
+.con04List li img{display: block;}
+
+
+.con04Tit{
+    position: absolute;
+    top:114px;
+    width:100%;
+    text-align: center;
+    font-size:24px;
+    color:#fff;
+    z-index:1;
+    /*top:50%;
+    margin-top:-81px;*/
+}
+
+.con04Tit img{
+    margin:0 auto;
+    margin-bottom: 20px;
+}
+.con04Tit h3{}
+
+
+/*mainCon05*/
+.mainCon05{
+    background-image: url(../images/main/mainCon05Bg.png);
+    padding-bottom: 0;
+}
+.mainCon05 .conTit{color:#333;}
+
+.con05List li{height: 430px;}
+.con05List li:hover img{transform:scale(1)}
+
+.con05Info{}
+.con05Info dl{
+    font-size: 0;
+}
+.con05Info dt{
+    display: inline-block;
+    font-size:14px;
+    font-weight:bold;
+    color:#f36c4d;
+}
+
+.con05Info dt::after{
+    content: "";
+    display: inline-block;
+    width:1px;
+    height: 12px;
+    background: #bbb;
+    margin:0 15px;
+}
+
+.con05Info dd{
+    display:inline-block;
+    font-size:14px;
+}
+
+.con05Info h3{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    margin-top:15px;
+}/*인라인은 width:줘야되고 block은 그냥해도 됨*/
+
+
+.con05News{
+    background:#f36c4d;
+    color:#fff;
+    padding:15px 0;
+    margin-top:100px;
+}
+.con05News .inner{
+    position: relative;
+    height:40px;
+    line-height: 40px;
+}
+
+.con05News a{color:#fff;}
+
+.con05News h3{
+    position: absolute;
+    font-size:18px;
+}
+
+.news{padding:0 100px;}
+
+.newsArrow{
+    position:absolute;
+    height: 40px;
+}
+
+.newsArrow>div{}
+.newsArrow>div:last-child{
+    position: absolute;
+    bottom:0;
+}
+
+.newsArrow>div a{}
+.newsArrow>div img{
+    display: block;
+}
+
+.newsList{padding-left:30px;}
+
+.newsList li a{
+    overflow:hidden;
+    display: block;
+}
+.newsList li p{float:left;}
+.newsList li span{
+    float:right;
+    font-size:14px;
+}
+
+.newsPlus{
+    width:40px;
+    height: 40px;
+    background:#fff url(../images/main/fPlusBtn.png)no-repeat center center;
+    font-size:0;
+    border-radius:50%;
+    position: absolute;
+    right:0;
+    top:0px;
+    transition:transform 1s;
+}
+
+.newsPlus:hover{
+    transform:rotate(360deg);
+}
+
+.newsPlus a{
+    display: block;
+    height: 100%;
+}
+
+
+/*지도추가CSS*/
+.location{padding:100px 0;}
+.location .conTit{
+    position: static;
+    margin-left:0;
+    text-align: center;
+    width:auto; 
+    margin-bottom: 50px;
+}
+
+.map{
+    height:450px;
+    overflow:hidden;
+    position:relative;
+}
+
+.map iframe{
+    position: absolute;
+    top:50%;
+    margin-top:-400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
